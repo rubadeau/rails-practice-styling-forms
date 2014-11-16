@@ -8,7 +8,3 @@ development:
 test:
   <<: *default
   database: rails-template-01-test
-
-production:
-  <<: *default
-  database: rails-template-01-production
