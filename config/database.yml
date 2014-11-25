@@ -3,8 +3,8 @@ default: &default
 
 development:
   <<: *default
-  database: rails-template-01-development
+  database: rails-practice-styling-forms-development
 
 test:
   <<: *default
-  database: rails-template-01-test
+  database: rails-practice-styling-forms-test
