@@ -20,5 +20,10 @@
   <%= @person.bio %>
 </p>
 
+<p>
+  <strong>Active:</strong>
+  <%= @person.active %>
+</p>
+
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

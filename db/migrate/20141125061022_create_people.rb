@@ -5,7 +5,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :last_name
       t.date :date_of_birth
       t.text :bio
-
+      t.boolean :active, default: false, null: false
       t.timestamps
     end
   end

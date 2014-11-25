@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20141125061022) do
     t.string   "last_name"
     t.date     "date_of_birth"
     t.text     "bio"
+    t.boolean  "active",        default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
