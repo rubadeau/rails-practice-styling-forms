@@ -1,15 +1,76 @@
-<h1>New person</h1>
+<div class="container">
+    <%= form_for @person, html: {class: "form-horizontal"} do |f| %>
+    <div class="page-header">
+      <h1>New Person</h1>
+    </div>
 
-<%= render 'form' %>
+        <form>
+          <div class="row">
+            <div class="col-md-3"><label for="examplename">First Name</label>
+            <div class="form-group">
+              <label for="col-md-3">First Name</label>
+              <input for= "col-md-3", type="text" class="form-control">
+            </div>
+            <div>
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Last Name</label>
+            <input type="password" class="form-control" >
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Date of Birth</label>
+            <input type="password" class="form-control"  id="exampleInputPassword1" placeholder="11/26/1984">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Bio</label>
+            <input type="password" class="form-control" >
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Active
+            </label>
+            <br></br>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Person</button>
+          <button type="button" class="btn btn-default">Cancel</button>
+        </form>
 
-<%= link_to 'Back', people_path %>
+    <% end %>
+  </div>
+</div
 
-<div class="well example">
-  <p>
-    <strong>
-      It should look like this:
-    </strong>
-  </p>
+<br></br>
 
-  <%= image_tag "new-person.png", class: "img-responsive" %>
+
+  <div class="well example">
+    <p>
+      <strong>
+        It should look like this:
+      </strong>
+    </p>
+
+    <%= image_tag "new-person.png", class: "img-responsive" %>
+  </div>
 </div>
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
