@@ -1,6 +1,6 @@
-<%= form_for(@person, html: {class: "form-horizontal col-md-10"}) do |f| %>
+<%= form_for(@person, html: {class: "form-horizontal"}) do |f| %>
   <% if @person.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger col-md-offset-2">
+    <div id="error_explanation" class="alert alert-danger col-md-offset-3">
       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
@@ -11,73 +11,44 @@
     </div>
   <% end %>
 
-  <div class="form-horizontal">
+
     <div class="form-group">
-      <div class="row">
-        <div class="field">
-          <div class="col-md-3">
-            <%= f.label :first_name %>
-          </div>
-          <div class="col-md-5">
-            <%= f.text_field :first_name %>
-          </div>
-        </div>
+        <%= f.label :first_name, class: "col-md-3 control-label" %>
+      <div class="col-md-5">
+        <%= f.text_field :first_name, class: "form-control" %>
       </div>
     </div>
-  </div>
 
-  <div class="form-horizontal">
     <div class="form-group">
-      <div class="row">
-        <div class="field">
-          <div class="col-md-3">
-            <%= f.label :last_name %>
-          </div>
-          <div class="col-md-5">
-            <%= f.text_field :last_name %>
-          </div>
-        </div>
+        <%= f.label :last_name, class: "col-md-3 control-label" %>
+      <div class="col-md-5">
+        <%= f.text_field :last_name, class: "form-control" %>
       </div>
     </div>
-  </div>
 
-  <div class="form-horizontal">
+
     <div class="form-group">
-      <div class="row">
-        <div class="field">
-          <div class="col-md-3">
-            <%= f.label :date_of_birth %>
-          </div>
-          <div class="col-md-5">
-            <%= f.text_field :date_of_birth %>
-          </div>
-        </div>
+        <%= f.label :date_of_birth, class: "col-md-3 control-label" %>
+      <div class="col-md-5">
+        <%= f.text_field :date_of_birth, class: "form-control", placeholder: "11/26/1984" %>
       </div>
     </div>
-  </div>
 
-  <div class="form-horizontal">
     <div class="form-group">
-      <div class="row">
-        <div class="field">
-          <div class="col-md-3">
-            <%= f.label :bio %>
-          </div>
-          <div class="col-md-5">
-            <%= f.text_area :bio %>
-          </div>
-        </div>
+        <%= f.label :bio, class: "col-md-3 control-label" %>
+      <div class="col-md-5">
+        <%= f.text_area :bio, class: "form-control" %>
       </div>
     </div>
-  </div>
 
-
+<div class="col-md-offset-3 col-cm-5">
   <div class="field">
     <%= f.check_box :active %>
     <%= f.label :active %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-info"%>
-    <button type="button" class="btn btn-default">Cancel</button>
+    <%= link_to 'Cancel', people_path, class: "btn btn-default" %>
   </div>
+</div>
 <% end %>
