@@ -1,42 +1,10 @@
 <div class="container">
-    <%= form_for @person, html: {class: "form-horizontal col-md-10"} do |f| %>
     <div class="page-header">
       <h1>New Person</h1>
     </div>
 
-        <form>
-          <div class="form-horizontal">
-            <div class="form-group">
-              <label for="first_name">First Name</label>
-              <input type="text" class="form-control" id="first_name">
-            </div>
-            <div>
-          </div>
-          <div class="form-group">
-              <label for="last_name">Last Name</label>
-            <input type="password" class="form-control" id="last_name">
-          </div>
-          <div class="form-group">
-              <label for="DOB">Date of Birth</label>
-            <input type="password" class="form-control"  id="DOB" placeholder="11/26/1984">
-          </div>
-          <div class="form-group">
-              <label for="Bio">Bio</label>
-            <input type="password" class="form-control" id="Bio">
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Active
-            </label>
-            <br></br>
-          </div>
-          <button type="submit" class="btn btn-info">Create Person</button>
-          <button type="button" class="btn btn-default">Cancel</button>
-        </form>
-
-    <% end %>
-  </div>
-</div
+        <%= render 'form' %>
+</div>
 
 <br></br>
 
